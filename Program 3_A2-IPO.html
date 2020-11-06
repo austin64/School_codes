@@ -1,0 +1,34 @@
+<Html>
+<!--Austin Strother
+Finding Volume in a Trapezoidal Prism
+Volume (V) = L x H x (P+Q/2)-->
+
+<head>
+    <title> Trapezoidal Prism Volume</title>
+    <br>
+</head>
+
+<body>
+    <script>
+
+        // Prompt for Length
+        // 1. Enter in the length (L)
+        // convert to floating point numbers
+        var Length = parseFloat(prompt('length'));
+        // prompt for Height
+        // 2. Enter in the height (H)
+        var Height = parseFloat(prompt('Height'));
+        // Prompt for Base Width 
+        // 3. Enter in the Base Width (P)
+        var BaseWidth = parseFloat(prompt('Width'))
+        // Prompt for Top Width 
+        // 4. Enter in the Top Width (Q)
+        var TopWidth = parseFloat(prompt('Top Width'));
+        // Calculate the average
+        var average = (Length * Height * (BaseWidth + TopWidth) / 2);
+        // Display the results 
+        document.write("Volume =" + average + "<br/>")
+    </script>
+</body>
+
+</Html>

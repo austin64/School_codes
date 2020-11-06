@@ -1,0 +1,53 @@
+<html>
+
+<head>
+    <script>
+        //Austin Strother
+        //Calculate the BMI 
+        //1.Prompt for Weight
+        function BMI_form() {
+            var w = document.getElementById("weight").value;
+           w = parseFloat(w);
+            //2.Prompt for Height
+            var i = document.getElementById("inches").value;
+            i = parseFloat(i);
+           var feet=document.getElementById("feet").value;
+           feet=parseFloat(feet);
+           i= i + (feet * 12);
+            //3.Calculate the formula
+            var BMI = w * 703 / Math.pow(i, 2);
+            //4.Results  
+            document.getElementById("bmi").value = BMI
+        }
+    </script>
+</head>
+
+    
+    <body>
+        <!--input the feet and inches for the height variable. Input the weight for weight variable.
+             Click the button for the results in the output and find the BMI.
+              extra material shows the BMI categories after the results-->
+        <h1>BMI Calculator</h1>
+        <form id="form01">
+          <strong>Height:</strong> <input type="text" id="feet" name="feet" size="2" />
+          feet <input type="text" id="inches" name="inches" size="2" /> inches
+          <br> <br>
+          <strong>Weight: </strong><input type="text" id="weight" name="weight" size="3" /> pounds
+          <br> <br>
+          <input type="button" value="Calculate BMI" onclick= "BMI_form()"/>
+          <input type="reset" value="Clear" />
+          <br> <br>
+          BMI: <input id="bmi" name="bmi" type="text" size="10" readonly>
+      
+        </form>
+        <h3>BMI Categories:</h3>
+  <ul>
+    <li>Underweight = &lt;18.5</li>
+    <li>Normal weight = 18.5–24.9</li>
+    <li>Overweight = 25–29.9</li>
+    <li>Obesity = BMI of 30 or greater</li>
+  </ul>
+      
+</body>
+
+</html>
